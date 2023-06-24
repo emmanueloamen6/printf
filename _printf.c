@@ -9,25 +9,25 @@ void print_buffer(char buffer[], int *buff_ind);
  */
 int _printf(const char *format, ...)
 {
-	int a = 0, printed = 0, printed_chars = 0;
+	int a, printed = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_ind = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
 
 	if (format == NULL)
 		return (-1);
+
 	va_start(list, format);
 
-	while (format[a] != '\0')
+	for (a = 0; format && format[a] != '\0'; a++)
 	{
 		if (format[a] != '%')
 		{
 			buffer[buff_ind++] = format[a];
 			if (buff_ind == BUFF_SIZE)
 				print_buffer(buffer, &buff_ind);
-			/* write(1, &format[i], 1);*/
+			/* write(1, &format[a], 1);*/
 			printed_chars++;
-			a++;
 		}
 		else
 		{
@@ -64,4 +64,3 @@ void print_buffer(char buffer[], int *buff_ind)
 
 	*buff_ind = 0;
 }
-
