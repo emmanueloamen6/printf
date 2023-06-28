@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_function - function specifiers.
+ * get_function - function specifiers
  *
  * @con_spec: Conversion specifiers.
  * @args: arguments.
