@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * print_char - print char
+ * print_char - print char.
  *
  * @args: argument.
  *
