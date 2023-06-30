@@ -22,7 +22,6 @@ int get_function(char con_spec, va_list args)
 		{'i', print_digit},
 		{'r', print_rev_string},
 		{'b', print_binary},
-		{'o', printf_oct},
 		{0, NULL}
 	};
 

@@ -7,19 +7,19 @@
 int print_rev_string(va_list args)
 {
 
-	int count_fun = 0, i = 0;
-	char *s = va_arg(args, char *);
+	int count_fun = 0, a = 0;
+	char *str = va_arg(args, char *);
 
-	if (!s)
-		s = "(null)";
-	while (s[i])
+	if (!str)
+		str = "(null)";
+	while (str[a])
 	{
-		i++;
+		a++;
 	}
-	while (i >= 0)
+	while (a >= 0)
 	{
-		count_fun += _putchar(s[i]);
-		i--;
+		count_fun += _putchar(str[a]);
+		a--;
 	}
 	count_fun--;
 	return (count_fun);
